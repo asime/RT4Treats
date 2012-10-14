@@ -1,0 +1,7 @@
+<h1>Search Results for #<%= params[:tag] %></h1>
+<% if !@search_results.nil? %>
+	<% @search_results.statuses.each do |result| %>
+		<hr>
+		<strong><img align="left" src="<%= result.user.profile_image_url %>">@<%= result.user.screen_name %> (<%= result.user.name %>)</strong>  <%= result.text %>
+	<% end %>
+<% end %>
