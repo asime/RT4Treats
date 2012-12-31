@@ -7,6 +7,7 @@ RT4Treats::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
   match 'tweeter/hashtag/' => 'tweeter#hashtag'
   match 'tweeter/hashtag/:tag' => 'tweeter#hashtag'
+  match 'signup' => 'landing#signup'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
@@ -50,7 +51,7 @@ RT4Treats::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'landing#landing'
+  root :to => 'landing#purchase'
 
   # See how all your routes lay out with "rake routes"
 
